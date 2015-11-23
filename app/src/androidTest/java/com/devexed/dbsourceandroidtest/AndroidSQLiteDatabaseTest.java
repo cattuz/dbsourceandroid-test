@@ -1,27 +1,17 @@
 package com.devexed.dbsourceandroidtest;
 
 import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.test.InstrumentationRegistry;
 
-import com.devexed.dbsource.Connection;
-import com.devexed.dbsource.DatabaseTestCase;
-import com.devexed.dbsourceandroid.AndroidSQLiteConnection;
+import com.devexed.dalwit.Connection;
+import com.devexed.dalwit.DatabaseTestCase;
+import com.devexed.dalwitandroid.AndroidSQLiteConnection;
 
 import java.io.File;
 
 public final class AndroidSQLiteDatabaseTest extends DatabaseTestCase {
 
     File file;
-
-    /*private static void runPragma(SQLiteDatabase connection, String pragma) {
-        // Runs a pragma on the database. Apparently needs to be a query whose cursor is actually used for the pragma to
-        // take effect.
-        Cursor cursor = connection.rawQuery(pragma, new String[0]);
-        cursor.moveToFirst();
-        cursor.close();
-    }*/
 
     Context getContext() throws Exception {
         return InstrumentationRegistry.getInstrumentation().getTargetContext();

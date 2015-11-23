@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion '23.0.2'
 
     defaultConfig {
         applicationId "com.devexed.dbsourceandroidtest"
@@ -12,10 +12,11 @@ android {
         versionName "1.0"
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
     }
+
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
@@ -29,7 +30,7 @@ dependencies {
     compile 'junit:junit:4.8.1'
     compile 'com.android.support.test:runner:0.4.1'
     compile 'com.android.support.test:rules:0.4.1'
-    compile 'com.devexed.dbsource:DBSource:0.1:tests'
-    compile 'com.devexed.dbsource:DBSource:0.1'
-    compile 'com.devexed.dbsourceandroid:DBSourceAndroid:0.1'
+    compile 'com.devexed.dalwit:dalwit:0.2:tests'
+    compile 'com.devexed.dalwit:dalwit:0.2'
+    compile 'com.devexed.dalwitandroid:dalwit-android:0.2'
 }
